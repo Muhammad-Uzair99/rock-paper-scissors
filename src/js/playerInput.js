@@ -1,7 +1,7 @@
 export default function GetPlayerInput(...arr) {
-    const playerWeapon = prompt("Choose your weapon: rock, paper, scissors", "rock").toLowerCase();
+    let playerWeapon = prompt("Choose your weapon: rock, paper, scissors", "rock").toLowerCase();
     
-    playerInputCheck(playerWeapon, ...arr);
+    playerWeapon = playerInputCheck(playerWeapon, ...arr);
 
     return playerWeapon;
 }
@@ -9,7 +9,7 @@ export default function GetPlayerInput(...arr) {
 function playerInputCheck(weapon, ...arr) {
     if(!arr.includes(weapon)) {
         alert("You entered wrong weapon");
-        GetPlayerInput(...arr);
+        weapon = GetPlayerInput(...arr);
     }
-    return;
+    return weapon;
 }
