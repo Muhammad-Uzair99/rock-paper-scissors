@@ -1,7 +1,13 @@
 import './style.css'
-
-/* document.querySelector('#app').innerHTML = `
-  <header></header>
+import { Welcome } from './scripts/welcome.js'
+/*document.querySelector('#app').innerHTML = `
 `
 
 */
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  Welcome();
+
+})

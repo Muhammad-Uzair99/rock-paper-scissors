@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en" class="text-sm md:text-md lg:text-lg xl:text-xl">
+<!DOCTYPE html>
+<html lang="en" class="text-sm md:text-md lg:text-lg xl:text-xl text-text">
 
 <head>
   <meta charset="UTF-8" />
@@ -8,13 +8,14 @@
   <title>Rock Paper Scissors</title>
 </head>
 
-<body class="bg-background font-poppins">
+<body class="bg-background font-poppins box-border text-text">
+
   <div id="app">
 
     <header
       class="text-text w-full h-16 flex justify-between items-center px-4 max-md:px-3 bg-transparent border-b border-accent">
 
-      <div class="flex justify-start items-center gap-2">
+      <div class="flex justify-start items-center gap-2" aria-label="logo">
         <img class="w-8 aspect-square rounded-full overflow-hidden transition duration-1000 hover:rotate-[360deg]"
           src="./imgs/logo.jpeg" alt="rock paper scissors logo">
         <h1
@@ -81,6 +82,37 @@
       </nav>
 
     </header>
+
+    <main class="w-screen h-[calc(100vh-6rem)] text-center">
+
+      <div id="welcome" class="w-full h-full flex flex-col justify-center items-center" aria-hidden="false">
+        <section id="outcome" class="h-4/6 flex justify-between items-center p-4">
+
+          <div
+            class="transition text-background transform translate-y-3/4 duration-700 delay-500 flex flex-col justify-center items-center gap-4">
+            <h2 id="text" class="text-3xl sm:text-4xl font-extrabold tracking-wider">
+            </h2>
+            <p class="sm:tracking-wider"></p>
+          </div>
+
+        </section>
+        <div class="w-28 h-11 flex justify-center items-center text-text">
+          <button id="nextBtn" aria-haspopup="true"
+            class="group bg-accent/70 w-24 h-10 rounded-md flex justify-center items-center gap-1 transition delay-100 duration-1000 hover:w-28 hover:h-11 hover:ease-in-out hover:bg-gradient-to-br hover:from-accent/50 hover:to-secondary active:w-20 active:h-9">
+            <span class="group-hover:text-lg group-active:text-sm transition delay-100 duration-1000">Next</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="w-4 h-4 group-hover:w-5 group-hover:h-5 group-active:w-3 group-active:h-3 flex justify-center items-center transition delay-100 duration-1000">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75">
+              </path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+
+    </main>
 
   </div>
   <script type="module" src="/main.js"></script>
